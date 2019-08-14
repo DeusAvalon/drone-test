@@ -7,8 +7,7 @@ steps:
   commands:
   - python -c 'import sys; sys.exit(0)'
 
-- name: pi breaker
-  image: ashael/pi:latest
+- name: stress-tool
+  image: polinux/stress
   commands:
-  - 1000000
-
+  - stress --cpu 4 --timeout 120s
