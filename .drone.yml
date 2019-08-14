@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+steps:
+- name: xxx
+  image: python:3.6-alpine
+  commands:
+  - python -c 'import sys; sys.exit(0)'
+
+- name: yyy
+  image: python:3.6-alpine
+  commands:
+  - python -c 'import sys; sys.exit(1)'
